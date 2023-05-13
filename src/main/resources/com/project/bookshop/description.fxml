@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.bookshop.controller.DescriptionController">
+    <children>
+        <VBox layoutX="20.0" layoutY="20.0" spacing="20.0">
+
+            <HBox spacing="20.0">
+                <ImageView fx:id="bookImage" fitHeight="200.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+                <VBox spacing="10.0">
+                    <Label fx:id="bookNameLabel" styleClass="heading" text="Book Name" />
+                    <Label fx:id="bookAuthorLabel" text="Author: " />
+                    <Label fx:id="bookPriceLabel" text="Price: " />
+                    <Label fx:id="bookGenreLabel" text="Genre: " />
+                </VBox>
+                <Button fx:id="buyButton" onAction="#handleBuyButtonAction" layoutX="273.0" layoutY="360.0" mnemonicParsing="false" style="-fx-background-color: green;" text="Buy" textFill="#fcf6f6" />
+
+            </HBox>
+            <TextArea fx:id="bookDescriptionTextArea" editable="false" prefHeight="200.0" prefWidth="600.0" promptText="Book Description" wrapText="true" />
+        </VBox>
+    </children>
+    <Button onAction="#goBack" fx:id="goback" layoutX="14.0" layoutY="358.0" mnemonicParsing="false" style="-fx-background-color: blue;" text="Go back" textFill="#fcf6f6" AnchorPane.bottomAnchor="14.799999999999955" />
+
+</AnchorPane>
+

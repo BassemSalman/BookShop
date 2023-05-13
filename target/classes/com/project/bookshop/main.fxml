@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.ScrollPane?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.bookshop.controller.MainController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" layoutX="-2.0" layoutY="89.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane fx:id="leftPane" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="169.0">
+               <children>
+
+                  <Button layoutX="14.0" layoutY="353.0" mnemonicParsing="false" text="logout" textFill="#3151b9" AnchorPane.bottomAnchor="19.799999999999976" fx:id="logoutButton" onAction="#goBack"/>
+                  <Label  layoutX="18.0" layoutY="22.0" prefHeight="26.0" prefWidth="94.0" textFill="#6600ff" fx:id="usernameLabel">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                <children>
+                  <SplitPane dividerPositions="0.14163306451612906" layoutX="111.0" layoutY="55.0" orientation="VERTICAL" prefHeight="398.4" prefWidth="422.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="37.0" prefWidth="421.0">
+                           <children>
+                              <Text fill="#200aea" layoutX="22.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search:">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                               <TextField fx:id="searchfield" layoutX="161.0" layoutY="6.0" prefHeight="26.0" prefWidth="246.0" />
+                               <Button fx:id="submitbutton" layoutX="360.0" layoutY="6.0" onAction="#handleSearch" mnemonicParsing="false" text="Submit" />
+
+
+                           </children>
+                        </AnchorPane>
+                       <ScrollPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+                                   hbarPolicy="AS_NEEDED" vbarPolicy="NEVER">
+                           <content>
+                               <HBox layoutX="62.0" layoutY="98.0" prefHeight="250.8" prefWidth="420.8" fx:id="booksContainer" />
+                           </content>
+                       </ScrollPane>
+
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
+
+
